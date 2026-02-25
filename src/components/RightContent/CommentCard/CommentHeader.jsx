@@ -7,9 +7,11 @@ const CommentHeader = ({ role, name, date, score, isExpanded, onToggle }) => {
       <div className="w-full flex flex-col   ">
         <div className=" w-full flex items-center justify-between gap-2 ">
           <div className="flex flex-col md:flex-row md:items-center gap-2">
-            <span className="px-4 py-1 bg-[#EFF8FF] border border-[#B2DDFF] text-[#175CD3] text-xs font-medium rounded-lg">
+           <div>
+           <span className="px-4 py-1 bg-[#EFF8FF] border border-[#B2DDFF] text-[#175CD3] text-xs font-medium rounded-lg">
               {role}
             </span>
+           </div>
             <div className="flex items-center gap-2">
             <span className="text-sm font-semibold text-gray-800">{name}</span>
             <span className="w-2 h-2 bg-primary rounded-full"></span>
@@ -31,6 +33,7 @@ const CommentHeader = ({ role, name, date, score, isExpanded, onToggle }) => {
 
             View survey
           </button>
+          <div>
           <span className={`px-4 py-1 text-xs font-medium rounded-md border border-[#ABEFC6] ${score === 'promoter'
             ? 'bg-[#ECFDF3] text-[#067647]'
             : score === 'passive'
@@ -39,6 +42,7 @@ const CommentHeader = ({ role, name, date, score, isExpanded, onToggle }) => {
             }`}>
             {score.charAt(0).toUpperCase() + score.slice(1)}
           </span>
+          </div>
         </div>
 
       </div>
