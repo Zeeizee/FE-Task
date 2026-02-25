@@ -1,19 +1,10 @@
-import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
+import React from 'react'
+import Dashboard from './components/Dashboard'
 
-function App() {
-  const [activeItem, setActiveItem] = useState('message');
+const App = () => {
   return (
-   <div className="flex">
-   
-   <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
-   <main className="ml-64">
-    <Dashboard activeItem={activeItem} setActiveItem={setActiveItem} />
-   </main>
-   </div>
-  );
+    <div><Dashboard /></div>
+  )
 }
 
-export default App;
-
+export default App

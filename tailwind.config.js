@@ -8,18 +8,22 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#8925D3',
-          // this primary selected not working why
+          DEFAULT: '#8925D3',          
           selected: '#F6F2FF',
-        
         },
-        
-        // Additional colors for dashboard UI
+        secondary: {
+          DEFAULT: '#667085',          
+          text: '#667085',
+          selected: '#F6F2FF',
+        },
       
         border: {
           DEFAULT: '#e5e7eb',
           light: '#f3f4f6',
           dark: '#d1d5db',
+        },
+        shadow: {
+          DEFAULT: 'shadow-xs #0000000D',
         },
         success: {
           DEFAULT: '#10b981',

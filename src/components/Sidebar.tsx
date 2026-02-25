@@ -14,7 +14,7 @@ import ExpnadIcon from '../icons/ExpnadIcon';
 
 
 
-const Sidebar = ({ activeItem, setActiveItem }) => {
+const Sidebar = ({ activeItem, setActiveItem,expanded, setExpanded }) => {    
 
   const navItems = [
     { key: 'home', icon: HomeIcon, title: 'Home' },
@@ -31,18 +31,18 @@ const Sidebar = ({ activeItem, setActiveItem }) => {
   ];
 
   return (
-    <div className="fixed left-0 top-0 h-full w-16 bg-white border-r border-gray-300 flex flex-col items-center justify-between p-2 z-40">
+    <div className={`h-screen h-full min-w-16 max-w-64 bg-white border-r border-gray-300 flex flex-col items-center justify-between p-2 z-40 transition-all duration-300 ${expanded ? 'w-48' : 'w-16'}`}>
 
 
-      <div className="flex flex-col gap-2 relative">
-        <div className="absolute top-1 -right-9 rounded-md bg-white  p-1">
-          <ExpnadIcon isActive={true} />
+      <div className="flex flex-col gap-2 relative w-full ">
+        <div className="absolute  -right-8 rounded-md bg-white h-12  flex items-center justify-center p-1 cursor-pointer" onClick={() => setExpanded(!expanded)}>
+            <div className='cursor-pointer'><ExpnadIcon expanded={expanded} /></div>
         </div>
-        <div className="  flex items-center justify-center mb-2 ">
+        <div className="  flex items-center justify-center mb-2  h-12 ">
           <img src={IMAGES.logo} alt="logo" className="w-10 h-10" />
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-1 ">
+        <div className={`flex w-full flex-col ${expanded ? 'items-start ' : 'items-center'} justify-center gap-1 `}>
           {navItems.map((item, index) => {
             const IconComponent = item.icon;
 
@@ -50,25 +50,28 @@ const Sidebar = ({ activeItem, setActiveItem }) => {
               <button
                 onClick={() => setActiveItem(item.key)}
                 key={index}
-                className={`p-2 rounded-lg transition-colors ${item.key === activeItem
+                className={`p-2 flex gap-2 ${expanded &&'w-full'} rounded-lg transition-colors ${item.key === activeItem
                   ? 'bg-primary-selected text-primary'
                   : 'hover:bg-primary-selected'
                   }`}
                 aria-label={`Navigation item ${index + 1}`}
               >
                 <IconComponent isActive={item.key === activeItem} />
+                {expanded && <span className="text-sm font-medium">{item.title}</span>}
               </button>
             );
           })}
         </div>
 
       </div>
-      <div className='rounded-full p-2 border border-gray-300 shadow-xs'>
-        <ProfileIcon isActive={true} />
+      <div className={`w-full flex ${expanded ? 'justify-start' : 'justify-center'} items-center gap-2 `}>
+        <div className='rounded-full p-2 border border-gray-300 shadow-xs'>
+          <ProfileIcon isActive={true} />
+        </div>
+        {expanded && <div className='text-sm font-medium'>John Doe</div>}
       </div>
     </div>
   );
-};
+}
 
 export default Sidebar;
-
