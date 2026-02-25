@@ -59,11 +59,8 @@ const SecondaryButton = ({
 
   return (
     <button 
-      className={`border border-gray-300 hover:border-secondary-text flex flex-row justify-center shadow items-center ${currentSize.padding} ${currentSize.gap} ${currentSize.height} ${currentProperty.background} ${currentProperty.border}  rounded-lg flex-none ${currentSize.textSize} ${currentProperty.textColor} ${className}`}
-      {...props}
-
-
-    >
+      className={`border border-gray-300 hover:border-secondary-text flex flex-row justify-center shadow-sm shadow-gray-200 font-medium items-center ${currentSize.padding} ${currentSize.gap} ${currentSize.height} ${currentProperty.background} ${currentProperty.border}  rounded-lg flex-none ${currentSize.textSize} ${currentProperty.textColor} ${className}`}
+      {...props}    >
       {!showIconRight && iconElement}
       {displayText && <span>{text || children}</span>}
       {showIconRight && iconElement}

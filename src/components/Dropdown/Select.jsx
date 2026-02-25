@@ -18,6 +18,8 @@ const Select = ({
   onChange,
   placeholder = 'Select an option',
   className = '',
+  leftIcon=null,
+
   ...props 
 }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -108,8 +110,7 @@ const Select = ({
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className={`flex flex-row  justify-between shadow items-center px-4 py-2 bg-white border border-gray-300 hover:border-secondary-text  rounded-lg ${currentProperty.textColor} text-sm cursor-pointer`}
-        style={{
-          
+        style={{          
           height: `${height}px`,
           gap: `${gap}px`,
         
@@ -117,7 +118,8 @@ const Select = ({
         }}
         {...props}
       >
-        <span className="flex-1 text-left truncate">{displayText}</span>
+        {leftIcon && leftIcon}
+        <span className="flex-1 text-left truncate">{displayText}</span>        
         {showIconLeft && iconElement}
         {!showIconLeft && iconElement}
       </button>

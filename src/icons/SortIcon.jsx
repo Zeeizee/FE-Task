@@ -1,0 +1,13 @@
+import React from 'react';
+
+const SortIcon = () => {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 10.6667L11.3333 13.3333M11.3333 13.3333L8.66667 10.6667M11.3333 13.3333V2.66666M2 5.33333L4.66667 2.66666M4.66667 2.66666L7.33333 5.33333M4.66667 2.66666V13.3333" stroke="#182230" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    
+  );
+};
+
+export default SortIcon;
+

@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ds Indigo Font Family */
+@layer base {
+  * {
+    font-family: 'Ds Indigo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Ds Indigo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0%;
+    line-height: 1.25rem; /* text-sm line-height */
+    font-size: 0.875rem; /* text-sm font-size (14px) */
+  }
+}
+
