@@ -31,7 +31,7 @@ const Sidebar = ({ activeItem, setActiveItem,expanded, setExpanded }) => {
   ];
 
   return (
-    <div className={`h-screen h-full min-w-16 max-w-64 bg-white border-r border-gray-300 flex flex-col items-center justify-between p-2 z-40 transition-all duration-300 ${expanded ? 'w-48' : 'w-16'}`}>
+    <div className={`max-h-[100vh] min-w-16 max-w-64 bg-white border-r border-gray-300 flex flex-col items-center justify-between p-2 z-40 transition-all duration-300 ${expanded ? 'w-48' : 'w-16'}`}>
 
 
       <div className="flex flex-col gap-2 relative w-full ">
@@ -42,7 +42,7 @@ const Sidebar = ({ activeItem, setActiveItem,expanded, setExpanded }) => {
           <img src={IMAGES.logo} alt="logo" className="w-10 h-10" />
         </div>
 
-        <div className={`flex w-full flex-col ${expanded ? 'items-start ' : 'items-center'} justify-center gap-1 `}>
+        <div className={`flex w-full flex-col ${expanded ? 'items-center md:items-start' : 'items-center'} justify-center gap-1 `}>
           {navItems.map((item, index) => {
             const IconComponent = item.icon;
 
@@ -50,25 +50,25 @@ const Sidebar = ({ activeItem, setActiveItem,expanded, setExpanded }) => {
               <button
                 onClick={() => setActiveItem(item.key)}
                 key={index}
-                className={`p-2 flex gap-2 ${expanded &&'w-full'} rounded-lg transition-colors ${item.key === activeItem
+                className={`p-2 flex gap-2 ${expanded &&'md:w-full'} rounded-lg transition-colors ${item.key === activeItem
                   ? 'bg-primary-selected text-primary'
                   : 'hover:bg-primary-selected'
                   }`}
                 aria-label={`Navigation item ${index + 1}`}
               >
                 <IconComponent isActive={item.key === activeItem} />
-                {expanded && <span className="text-sm font-medium">{item.title}</span>}
+                {expanded && <span className="hidden md:block text-sm font-medium">{item.title}</span>}
               </button>
             );
           })}
         </div>
 
       </div>
-      <div className={`w-full flex ${expanded ? 'justify-start' : 'justify-center'} items-center gap-2 `}>
+      <div className={`w-full flex ${expanded ? 'justify-center md:justify-start' : 'justify-center'} items-center gap-2 `}>
         <div className='rounded-full p-2 border border-gray-300 shadow-xs'>
           <ProfileIcon isActive={true} />
         </div>
-        {expanded && <div className='text-sm font-medium'>John Doe</div>}
+        {expanded && <div className='hidden md:block text-sm font-medium'>John Doe</div>}
       </div>
     </div>
   );

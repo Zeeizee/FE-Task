@@ -3,9 +3,9 @@ import ChevronUpIcon from '../../../icons/ChevronUpIcon'
 
 const CommentHeader = ({ role, name, date, score, isExpanded, onToggle }) => {
   return (
-    <div className={`flex items-center ${isExpanded ? 'border-b mb-4' : ''} justify-between  p-6`}>
-      <div className="w-full flex flex-col  gap-1 ">
-        <div className="w-full flex items-center justify-between gap-2 ">
+    <div className={`flex items-center ${isExpanded ? 'border-b mb-4' : ''} justify-between  p-4`}>
+      <div className="w-full flex flex-col   ">
+        <div className=" w-full flex items-center justify-between gap-2 ">
           <div className="flex items-center gap-2">
             <span className="px-4 py-1 bg-[#EFF8FF] border border-[#B2DDFF] text-[#175CD3] text-xs font-medium rounded-lg">
               {role}
@@ -14,7 +14,7 @@ const CommentHeader = ({ role, name, date, score, isExpanded, onToggle }) => {
             <span className="w-2 h-2 bg-primary rounded-full"></span>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 ">
           <span className="text-xs text-secondary-text flex items-center gap-1">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.33333 1.33334V4.00001M10.6667 1.33334V4.00001M2 6.66668H14M5.33333 9.33334H5.34M8 9.33334H8.00667M10.6667 9.33334H10.6733M5.33333 12H5.34M8 12H8.00667M10.6667 12H10.6733M3.33333 2.66668H12.6667C13.403 2.66668 14 3.26363 14 4.00001V13.3333C14 14.0697 13.403 14.6667 12.6667 14.6667H3.33333C2.59695 14.6667 2 14.0697 2 13.3333V4.00001C2 3.26363 2.59695 2.66668 3.33333 2.66668Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round" />

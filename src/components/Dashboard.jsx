@@ -6,7 +6,7 @@ function Dashboard() {
   const [activeItem, setActiveItem] = useState('message');
   const [expanded, setExpanded] = useState(false);
   return (
-    <div className="flex">
+    <div className="flex max-h-[100vh]">
 
       <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} expanded={expanded} setExpanded={setExpanded} />
       <div className='flex-1 '>
