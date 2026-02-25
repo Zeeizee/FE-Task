@@ -9,7 +9,7 @@ const Content = ({ viewAiSummary, setViewAiSummary }) => {
             
 
             
-            <div className={` transition-all  duration-300 ${viewAiSummary ? 'w-[calc(100%-345px)]' : 'w-full'}`}>
+            <div className={` transition-all  duration-300 ${viewAiSummary ? 'hidden md:block w-[calc(100%-345px)]' : 'w-full'}`}>
             <MainContent />            
             </div>
            
