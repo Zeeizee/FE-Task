@@ -3,12 +3,12 @@ import ChevronDownIcon from '../../../icons/ChevronDownIcon'
 
 const CommentActions = () => {
   return (
-    <div className="flex items-center justify-between  px-6 py-4 ">
-      <div className="flex items-center gap-2">
+    <div className="flex flex-col gap-2 md:gap-0 md:flex-row items-center justify-between  px-6 py-4 ">
+      <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
         <button className="px-4 py-2 bg-primary shadow text-white text-sm font-medium rounded-lg hover:bg-[#943AD7] transition-colors flex items-center gap-2">
-        <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.83333 7.16667L0.5 3.83333L3.83333 0.5M7.16667 7.16667L3.83333 3.83333M3.83333 3.83333L7.16667 0.5M3.83333 3.83333H11.1667C11.8739 3.83333 12.5522 4.11428 13.0523 4.61438C13.5524 5.11448 13.8333 5.79276 13.8333 6.5V7.83333" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.83333 7.16667L0.5 3.83333L3.83333 0.5M7.16667 7.16667L3.83333 3.83333M3.83333 3.83333L7.16667 0.5M3.83333 3.83333H11.1667C11.8739 3.83333 12.5522 4.11428 13.0523 4.61438C13.5524 5.11448 13.8333 5.79276 13.8333 6.5V7.83333" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
 
           Reply all
         </button>

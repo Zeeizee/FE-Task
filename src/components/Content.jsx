@@ -5,7 +5,7 @@ import MainContent from './RightContent/MainContent'
 
 const Content = ({ viewAiSummary, setViewAiSummary }) => {
     return (
-        <div  className='w-full  min-w-[650px] overflow-y-auto  flex  gap-4  '>
+        <div  className='w-full   overflow-y-auto  flex  gap-4  '>
             
 
             
@@ -13,7 +13,7 @@ const Content = ({ viewAiSummary, setViewAiSummary }) => {
             <MainContent />            
             </div>
            
-            {viewAiSummary && <div className={` ${viewAiSummary ? 'w-[345px]' : 'w-0'} transition-all duration-700 h-full fixed right-0 border-l border-gray-300 z-50`}>
+            {viewAiSummary && <div className={` ${viewAiSummary ? 'w-[calc(100%-100px)] md:w-[345px]' : 'w-0'} transition-all duration-700 h-full fixed right-0 border-l border-gray-300 z-50`}>
             <AiSummaryContent onClose={() => setViewAiSummary(false)} />
             </div>}
 

@@ -8,7 +8,7 @@ const CommentItem = ({ comment }) => {
         <span className="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></span>
       </div>
       <p className="text-sm text-gray-800 leading-relaxed">{comment.answer}</p>
-      <div className='flex items-center justify-between'>
+      <div className='flex flex-col md:flex-row gap-2 items-center justify-between'>
         <div>
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 14.6667C14.3682 14.6667 14.6667 14.3682 14.6667 14C14.6667 13.6318 14.3682 13.3333 14 13.3333C13.6318 13.3333 13.3333 13.6318 13.3333 14C13.3333 14.3682 13.6318 14.6667 14 14.6667Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round" />
