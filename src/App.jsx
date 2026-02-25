@@ -3,7 +3,7 @@ import Dashboard from './components/Dashboard'
 
 const App = () => {
   return (
-    <div><Dashboard /></div>
+    <div className='max-h-[100vh] '><Dashboard /></div>
   )
 }
 

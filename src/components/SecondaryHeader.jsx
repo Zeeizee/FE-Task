@@ -12,7 +12,7 @@ import SortIcon from '../icons/SortIcon'
 const SecondaryHeader = ({ viewAiSummary, setViewAiSummary }) => {
     const [searchValue, setSearchValue] = useState('')
     const [selectedSort, setSelectedSort] = useState('Newest')
- 
+
 
     const sortOptions = [
         'Newest',
@@ -29,18 +29,15 @@ const SecondaryHeader = ({ viewAiSummary, setViewAiSummary }) => {
         <div className="w-full bg-white border-b border-gray-200 px-6 py-2">
             <div className="flex flex-col md:flex-row items-stretch lg:items-center gap-3">
                 {/* Search Bar */}
-                <div className="flex-1 min-w-0 max-w-[326px]">
+                <div className="flex-1 flex flex-col lg:flex-row gap-2 flex-wrap sm:flex-nowrap ">
                     <SearchInput
                         placeholder="Search..."
                         value={searchValue}
                         onChange={(e) => setSearchValue(e.target.value)}
-                        className="w-full"
+                        className="w-full min-w-[200px] md:max-w-[326px] max-w-full"
+
                     />
-                </div>
-
-
-                <div className='flex-1 flex flex-col sm:flex-row md:justify-between gap-1 items-center'>
-                    <div className="flex flex-wrap items-center gap-2 ">
+                    <div className="flex flex-wrap sm:flex-nowrap items-center gap-2">
 
                         <Select
                             textInput={`Sort by: ${selectedSort}`}
@@ -87,6 +84,11 @@ const SecondaryHeader = ({ viewAiSummary, setViewAiSummary }) => {
                             className="whitespace-nowrap"
                         />
                     </div>
+                </div>
+
+
+                <div className='flex  gap-1 items-center'>
+
 
                     <div className="flex flex-wrap items-center gap-2 ">
                         <SecondaryButton
@@ -111,8 +113,8 @@ const SecondaryHeader = ({ viewAiSummary, setViewAiSummary }) => {
                             showIconRight={false}
                             onClick={() => setViewAiSummary(true)}
                             className={`whitespace-nowrap ${viewAiSummary
-                                    ? 'bg-gray-50 border-gray-400'
-                                    : ''
+                                ? 'bg-gray-50 border-gray-400'
+                                : ''
                                 }`}
                         />
                     </div>

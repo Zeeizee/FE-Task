@@ -14,7 +14,8 @@ import ExpnadIcon from '../icons/ExpnadIcon';
 
 
 
-const Sidebar = ({ activeItem, setActiveItem,expanded, setExpanded }) => {    
+const 
+Sidebar = ({ activeItem, setActiveItem,expanded, setExpanded }) => {    
 
   const navItems = [
     { key: 'home', icon: HomeIcon, title: 'Home' },
@@ -31,18 +32,18 @@ const Sidebar = ({ activeItem, setActiveItem,expanded, setExpanded }) => {
   ];
 
   return (
-    <div className={`max-h-[100vh] min-w-16 max-w-64 bg-white border-r border-gray-300 flex flex-col items-center justify-between p-2 z-40 transition-all duration-300 ${expanded ? 'w-48' : 'w-16'}`}>
+    <div className={`h-[100vh]  min-w-16 max-w-64 bg-white border-r border-gray-300 flex flex-col items-center justify-between p-2 transition-all duration-300 ${expanded ? 'md:w-48 w-16' : 'w-16'}`}>
 
 
-      <div className="flex flex-col gap-2 relative w-full ">
-        <div className="absolute  -right-8 rounded-md bg-white h-12  flex items-center justify-center p-1 cursor-pointer" onClick={() => setExpanded(!expanded)}>
-            <div className='cursor-pointer'><ExpnadIcon expanded={expanded} /></div>
+      <div className="flex flex-col gap-2 relative w-full   ">
+        <div className=" absolute -right-8  rounded-md bg-white h-12  flex items-center justify-center p-1 z-50 cursor-pointer" onClick={() => setExpanded(!expanded)}>
+            <div className='cursor-pointer '><ExpnadIcon expanded={expanded} /></div>
         </div>
         <div className="  flex items-center justify-center mb-2  h-12 ">
           <img src={IMAGES.logo} alt="logo" className="w-10 h-10" />
         </div>
 
-        <div className={`flex w-full flex-col ${expanded ? 'items-center md:items-start' : 'items-center'} justify-center gap-1 `}>
+        <div className={`flex  max-h-[70vh] overflow-y-auto overflow-x-hidden w-full flex-col ${expanded ? 'items-center md:items-start' : 'items-center'} justify-center gap-1 `}>
           {navItems.map((item, index) => {
             const IconComponent = item.icon;
 
@@ -57,7 +58,7 @@ const Sidebar = ({ activeItem, setActiveItem,expanded, setExpanded }) => {
                 aria-label={`Navigation item ${index + 1}`}
               >
                 <IconComponent isActive={item.key === activeItem} />
-                {expanded && <span className="hidden md:block text-sm font-medium">{item.title}</span>}
+                {expanded && <span className="hidden md:block text-xs font-normal">{item.title}</span>}
               </button>
             );
           })}

@@ -33,7 +33,7 @@ const CommentHeader = ({ role, name, date, score, isExpanded, onToggle }) => {
             ? 'bg-[#ECFDF3] text-[#067647]'
             : score === 'passive'
               ? 'bg-yellow-100 text-yellow-700'
-              : 'bg-red-100 text-red-700'
+              : 'bg-red-100 border border-red-700 text-red-700'
             }`}>
             {score.charAt(0).toUpperCase() + score.slice(1)}
           </span>

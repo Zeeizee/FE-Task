@@ -5,7 +5,9 @@ import Content from './Content'
 const RightSideBar = () => {
   const [viewAiSummary, setViewAiSummary] = useState(false)
   return (
-    <div>
+   
+    <div className='max-h-[100vh] bg-[#F9FAFB] '>
+
         <Header />
         <SecondaryHeader viewAiSummary={viewAiSummary} setViewAiSummary={setViewAiSummary} />
         <Content viewAiSummary={viewAiSummary} setViewAiSummary={setViewAiSummary} />

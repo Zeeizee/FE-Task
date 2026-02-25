@@ -23,7 +23,7 @@ const MainContent = () => {
         onPageChange={setCurrentPage}
       />
       
-      <div className="px-6  flex flex-col gap-4">
+      <div className="px-6  flex flex-col gap-4 max-h-[calc(100vh-215px)] overflow-y-auto">
         <WordCloud />
         
         <div className="flex flex-col gap-4">

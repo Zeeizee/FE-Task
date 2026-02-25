@@ -6,7 +6,7 @@ import ChevronDownIcon from '../icons/ChevronDownIcon'
 
 const Header = () => {
   return (
-    <div className='w-full h-auto gap-3 sm:h-16 border-b p-6 border-gray-300 flex flex-col sm:flex-row items-center justify-between'>
+    <div className='w-full z-[777] bg-white h-auto gap-3 sm:h-16 border-b p-6 border-gray-300 flex flex-col sm:flex-row items-center justify-between'>
         <h1 className='text-xl font-semibold'>Comments</h1>
         <div className='w-full md:w-auto  flex flex-col sm:flex-row items-center gap-2'>
             <Select 
