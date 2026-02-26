@@ -3,10 +3,10 @@ import Header from './Header'
 import SecondaryHeader from './SecondaryHeader'
 import Content from './Content'
 const RightSideBar = () => {
-  const [viewAiSummary, setViewAiSummary] = useState(false)
+  const [viewAiSummary, setViewAiSummary] = useState(true)
   return (
    
-    <div className='max-h-[100vh] bg-[#F9FAFB] '>
+    <div className='max-h-[100vh]  '>
 
         <Header />
         <SecondaryHeader viewAiSummary={viewAiSummary} setViewAiSummary={setViewAiSummary} />

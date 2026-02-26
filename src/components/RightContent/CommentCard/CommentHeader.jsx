@@ -4,7 +4,7 @@ import ChevronUpIcon from '../../../icons/ChevronUpIcon'
 const CommentHeader = ({ role, name, date, score, isExpanded, onToggle }) => {
   return (
     <div className={`flex items-center ${isExpanded ? 'border-b mb-4' : ''} justify-between  p-4`}>
-      <div className="w-full flex flex-col   ">
+      <div className="w-full flex flex-col gap-2   ">
         <div className=" w-full flex items-center justify-between gap-2 ">
           <div className="flex flex-col md:flex-row md:items-center gap-2">
            <div>
@@ -37,7 +37,7 @@ const CommentHeader = ({ role, name, date, score, isExpanded, onToggle }) => {
           <span className={`px-4 py-1 text-xs font-medium rounded-md border border-[#ABEFC6] ${score === 'promoter'
             ? 'bg-[#ECFDF3] text-[#067647]'
             : score === 'passive'
-              ? 'bg-yellow-100 text-yellow-700'
+              ? 'bg-yellow-100 border border-yellow-700 text-yellow-700'
               : 'bg-red-100 border border-red-700 text-red-700'
             }`}>
             {score.charAt(0).toUpperCase() + score.slice(1)}
